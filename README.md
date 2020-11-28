@@ -1,5 +1,5 @@
 # realtime-reload
-Angular + Spring Boot Webflux + MongoDB = Realtime reload
+Angular + Spring Boot + Spring Webflux + MongoDB = Realtime reload
 
 ## Como utilizar
 ### Docker Compose
