@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: poc-reactive-api
+  data:
+    mongodb:
+      database: customers
+      host: 127.0.0.1
+      port: 27017
+      username: customers
+      password: customers
