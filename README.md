@@ -1,7 +1,9 @@
 # realtime-reload
-Angular + Spring Boot Webflux + MongoDB = Realtime reload
+Angular + Spring Boot + Spring Webflux + MongoDB = Realtime reload
 
 ## Como utilizar
+
+
 ### Docker Compose
 Execute o comando `docker-compose up` para subir o banco de dados MongoDB.
 
