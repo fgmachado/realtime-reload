@@ -11,7 +11,7 @@ export class CustomerService {
   constructor(private serverSentEventService: ServerSentEventService, private _zone: NgZone) { }
 
   findAll(): EventEmitter<Customer> {
-    const eventSource = this.serverSentEventService.getEventSource("http://localhost:8080/api/customers");
+    const eventSource = this.serverSentEventService.getEventSource("/api/customers");
     let eventEmitter = new EventEmitter<Customer>(true);
 
     eventSource.onmessage = event => {
@@ -24,7 +24,7 @@ export class CustomerService {
   }
 
   findAllByTenant(): EventEmitter<Customer> {
-    const eventSource = this.serverSentEventService.getEventSource("http://localhost:8080/api/customers/1234abc");
+    const eventSource = this.serverSentEventService.getEventSource("/api/customers/1234abc");
     let eventEmitter = new EventEmitter<Customer>(true);
 
     eventSource.onmessage = event => {

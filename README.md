@@ -1,16 +1,15 @@
 # realtime-reload
 Angular + Spring Boot + Spring Webflux + MongoDB = Realtime reload
 
-## Como utilizar
+## Executando a solução
+Para executar, utilize o comando `docker-compose up --build --force-recreate`.
+Após executar este comando serão iniciados os containeres do MongoDB, backend e frontend.
 
-
-### Docker Compose
-Execute o comando `docker-compose up` para subir o banco de dados MongoDB.
+### MongoDB
+Banco de dados NoSQL que possibilita a utilização do paradigma reativo.
 
 ### Backend
-Abra no seu IDE de preferência, importe o projeto Maven e execute.
+Aplicação Spring Boot utilizando Spring Webflux para implementação do endpoint stream.
 
 ### Frontend
-Execute o comando `ng serve`.
-
-Após subir os projetos, basta inserir documentos no banco de dados e ver a atualização na tela.
+Aplicação Angular que emite eventos baseado nos eventos recebidos do endpoint de stream.

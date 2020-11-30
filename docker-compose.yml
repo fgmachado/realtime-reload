@@ -12,20 +12,7 @@ services:
       MONGO_INITDB_DATABASE: customers
       MONGO_INITDB_USERNAME: customers
       MONGO_INITDB_PASSWORD: customers
-  purejs:
-    container_name: "purejs"
-    hostname: "purejs"
-    build:
-      context: ./frontend/purejs
-    ports:
-      - "9000:80"
-  angular:
-    container_name: "angular"
-    hostname: "angular"
-    build:
-      context: ./frontend/angular
-    ports:
-      - "4200:80"
+
   backend:
     container_name: "backend"
     hostname: "backend"
@@ -33,3 +20,15 @@ services:
       context: ./backend
     ports:
       - "8080:8080"
+    links:
+      - "mongo"
+
+  angular:
+    container_name: "angular"
+    hostname: "angular"
+    build:
+      context: ./frontend/angular
+    ports:
+      - "4200:80"
+    links:
+      - "backend"
